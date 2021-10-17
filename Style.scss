@@ -1,0 +1,708 @@
+@import url(style/reset/reset.css);
+@import url(style/font/font.css);
+
+@mixin wh ($width, $height) {
+
+  width: $width;
+  height: $height;
+}
+
+@mixin whm ($width, $height,$margin-top) {
+
+  width: $width;
+ height: $height;
+  margin-top: $margin-top;
+}
+
+@mixin FontPopB {
+
+}
+
+header {
+  //background-image: url(img/header/Bitmap.png);
+  @include wh (1920px,1062px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  .head-1 {
+    @include wh (1920px,1062px);
+    position: absolute;
+    background-image: url(img/header/image.jpg);
+  }
+  .head-2 {
+    @include wh (1920px,1062px);
+    position: absolute;
+    background-image: url(img/header/Bitmap.png);
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    padding: 24px;
+    z-index: 2;
+
+    &-icon {
+      width: 240px;
+      font-family: "Poppins Bold";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      margin-left: 106px;
+
+      a {
+        margin-left: 7px;
+      }
+    }
+
+    &-b {
+      width: 538px;
+      padding: 7px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        font-family: "Poppins SemiBold";
+        font-style: normal;
+        font-weight: 600;
+
+        li {
+          width: 22.5%;
+          list-style-type: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .center {
+    margin: 0 auto;
+    display: flex;
+    @include wh (1564px,265px);
+    justify-content: space-between;
+    z-index: 2;
+
+    &-left {
+      //background-image: url(img/header/Path.svg);
+      @include whm (24px,43.27px,95px );
+
+    }
+
+    &-c {
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      @include whm (1008px,265px,-30px );
+
+      h1 {
+        font-family: "Poppins SemiBold";
+        font-size: 92px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100px;
+        letter-spacing: 0px
+      }
+
+      p {
+        font-family: "Poppins SemiBold";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        margin-top: 28px;
+      }
+
+      button {
+        background: #00A031;
+        font-family: "Poppins ExtraBold";
+        font-size: 18px;
+        line-height: 22px;
+        color: white;
+        cursor: pointer;
+        margin-top: 57px;
+        width: 173px;
+      }
+
+    }
+
+    &-right {
+      //background-image: url(img/header/Path2.svg);
+      @include whm (24px,43.27px,95px);
+      cursor: pointer;
+    }
+  }
+
+  .items {
+    margin: 0 auto;
+    display: flex;
+    @include wh (84px,22px);
+    justify-content: space-around;
+    margin-bottom: 105px;
+    z-index: 2;
+
+    &-oval {
+      background-image: url(img/header/OvalCopy2.png);
+      @include wh (12.65px,12.65px);
+    }
+
+    .active {
+      @include wh (12.65px,12.65px);
+      background-image: url(img/header/Group6.svg);
+      background-repeat: no-repeat;
+      background-position: 50%, 25%;
+      border-radius: 50%;
+    }
+  }
+}
+
+footer {
+  background-image: url(img/footer/bg.png);
+
+  width: 1920px;
+  height: 344px;
+  margin: 0 auto;
+
+  .sidebar2 {
+    width: 490px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    color: white;
+
+    &-icon {
+      margin: 0 auto;
+      width: 250px;
+      font-family: "Poppins Bold";
+
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      margin-top: 160px;
+
+
+    }
+
+    &-b {
+      width: 437px;
+
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        font-family: "Poppins SemiBold";
+        font-style: normal;
+        font-weight: 600;
+        height: 60px;
+        padding-top: 56px;
+width: 577px;
+
+        li {
+          width: 22%;
+          list-style-type: none;
+
+
+        }
+
+        a {
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+.end{
+  background-image: url(img/footer/UpQode2019AllR.png);
+background-repeat: no-repeat;
+  height: 24px;
+  width: 252px;
+  margin: 0 auto;
+  margin-top: 10px;
+
+
+}
+    }
+  }
+}
+
+.item1 {
+  @include wh (12px,12px);
+}
+
+.button {
+  @include wh (208px,54px);
+  border: 2px solid #00A031;
+  box-sizing: border-box;
+  border-radius: 28px;
+  color: #00A031;
+}
+
+main {
+  margin: 0 auto;
+  position: relative;
+
+  .part {
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include wh (1206px,2038px);
+
+    &-text {
+      width: 47%;
+      margin-top: 178px;
+      margin-right: -20px;
+
+
+      h1 {
+        font-family: "Poppins ExtraBold";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 51px;
+        color: #00A031;
+
+
+      }
+
+      p {
+        font-family: "Poppins Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: #6C6C6C;
+        padding-top: 29px;
+
+      }
+
+      ul {
+        font-family: "Poppins Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: #6C6C6C;
+        margin-top: 19px;
+        margin-left: 9px;
+      }
+
+      button {
+        margin-top: 30px;
+      }
+    }
+
+    &-img {
+      background-image: url(img/main/section1/Oval_12.png);
+      @include whm (522px,522px,89px );
+      margin-left: -23px;
+      border-radius: 0px;
+      position: relative;
+
+      .mediumOval {
+        background-image: url(img/main/section1/Combined_Shape.png);
+        @include wh (398px,398px);
+        border-radius: 0px;
+        position: absolute;
+        top: 70px;
+        left: 60px;
+
+
+        .smallOval {
+          background-image: url(img/main/section1/Bitmap.png);
+          @include wh (413px,624px);
+          border-radius: 0px;
+          position: absolute;
+          top: -67px;
+          left: -1px;
+
+        }
+      }
+
+    }
+
+    .smallOval2 {
+      @include wh (413px,624px);
+      background-image: url(img/main/section1/Bitmap_Copy.png);
+      background-position: center;
+    }
+
+    .smallOval3 {
+      @include wh (413px,624px);
+      background-image: url(img/main/section1/Bitmap_Copy2.png);
+      background-position: center;
+    }
+  }
+
+  .t2 {
+    margin-right: 0px;
+    margin-top: 281px;
+  }
+
+  .i2 {
+    margin-top: 148px;
+    margin-left: 0px;
+    margin-right: 40px;
+
+    .i2-1 {
+      margin-top: -78px;
+      margin-left: -30px;
+    }
+  }
+
+  .t3 {
+    margin-top: 273px;
+  }
+
+  .i3 {
+    margin-top: 184px;
+
+    .i3-1 {
+      margin-top: -62px;
+      margin-left: 7px;
+    }
+  }
+
+  .ul {
+    margin-bottom: 48px;
+  }
+
+  .radius {
+    z-index: -1;
+    @include wh (662px,1214px);
+    border: 1px solid #29A0EC;
+    border-left: 0px;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    position: absolute;
+    top: 454px;
+    left: 29.86%;
+
+    .rotate {
+      left: -42%;
+      @include wh (662px,1214px);
+      position: absolute;
+
+      .oval {
+        top: -79px;
+        left: 40%;
+        position: absolute;
+        height: 165px;
+        width: 165px;
+        border-radius: 0px;
+      }
+    }
+  }
+
+
+  .slide-carousel {
+    margin: 336px auto;
+    @include wh (1165px,400px);
+
+    .contact {
+      @include wh (1165px,534px);
+      display: flex;
+      justify-content: space-between;
+      animation-name: slyder;
+      animation-timing-function: linear;
+      animation-duration: 0.3s;
+
+
+      .left {
+        width: 550px;
+
+        h1 {
+          font-family: "Poppins ExtraBold";
+          font-size: 38px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 51px;
+          color: #00A031;
+          margin-top: 27px;
+
+        }
+
+        h2 {
+          font-family: "Poppins Regular";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          color: #6C6C6C;
+          margin-top: 4px;
+        }
+
+        p {
+          font-family: "Poppins Regular";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          color: #6C6C6C;
+          margin-top: 37px;
+
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          font-family: "Poppins Regular";
+          font-size: 16px;
+          line-height: 16px;
+          color: #6C6C6C;
+          text-decoration: none;
+          margin-top: 50px;
+          margin-left: 12px;
+
+          li {
+            width: 27%;
+          }
+        }
+
+        &-navigate {
+          @include whm (550px,130px,73px );
+          display: flex;
+          flex-direction: row;
+          background: #FBFBFB;
+
+          &-img {
+            background-image: url(img/main/section2/contactimg1.png);
+            background-size: cover;
+            @include wh (91px,130px);
+
+          }
+          .contactimg2{
+            background-image: url(img/main/section2/Rashford.jpeg);
+            background-repeat: no-repeat;
+          }
+          .contactimg3{
+            background-image: url(img/main/section2/madonna.jpeg);
+            background-size: cover;
+          }
+
+          &-right {
+            h1 {
+              color: #00A031;
+              font-family: "Poppins SemiBold";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 28px;
+              padding: 17px;
+              margin-top: 15px;
+            }
+
+            &-pn {
+              @include wh (461px,30px);
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              box-sizing: border-box;
+
+              .prev {
+                cursor: pointer;
+                color: #00A031;
+                padding-top: 36px;
+              }
+
+              .next {
+                cursor: pointer;
+                color: #00A031;
+                padding-top: 35px;
+                padding-left: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        @include wh (400px,533px);
+        position: relative;
+
+        &-part1 {
+          background-image: url(img/main/section2/contactimg1.png);
+          @include wh (400px,533px);
+          position: absolute;
+          z-index: 3;
+          left: -97px;
+        }
+        .contactimg2{
+          background-image: url(img/main/section2/Rashford.jpeg);
+          background-repeat: no-repeat;
+        }
+        .contactimg3{
+          background-image: url(img/main/section2/madonna.jpeg);
+          background-size: cover;
+
+        }
+
+        &-part2 {
+          @include wh (305px,467px);
+          z-index: 2;
+          position: absolute;
+          left: 51px;
+          top: 24px;
+          opacity: 0.8;
+
+          &-img {
+            z-index: 2;
+            @include wh (305px,467px);
+            background-image: url(img/main/section2/contactimg1.png);
+            filter: blur(73.3936px);
+            background-size: cover;
+            position: absolute;
+          }
+
+          &-shadow {
+            @include wh (305px,467px);
+            border-radius: 0px;
+            background: #D8D8D8;
+            z-index: 1;
+            position: absolute;
+          }
+        }
+
+        &-part3 {
+          @include wh (256px,410px);
+          z-index: 1;
+          position: absolute;
+          left: 137px;
+          top: 57px;
+          opacity: 0.5;
+
+          &-img {
+            z-index: 2;
+            @include wh (256px,410px);
+            background-image: url(img/main/section2/contactimg1.png);
+            filter: blur(17.3936px);
+            position: absolute;
+            background-size: cover;
+          }
+
+          &-shadow {
+            @include wh (256px,410px);
+            border-radius: 0px;
+            background: #D8D8D8;
+            z-index: 1;
+            position: absolute;
+          }
+        }
+
+        .contact-img3 {
+          background-image: url(img/main/section2/contactimg1.png);
+          @include wh (400px,533px);
+          position: absolute;
+          z-index: 1;
+          height: 60%;
+          left: 90px;
+          top: 40px;
+        }
+      }
+    }
+  }
+
+  .map {
+    margin: 0 auto;
+    @include wh (1253px,761px);
+    display: flex;
+    flex-direction: row;
+
+    .left {
+      width: 365px;
+      padding-left: 40px;
+      padding-right: 20px;
+
+      h1 {
+        font-family: "Poppins Bold";
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        color: #00A031;
+      }
+
+      p {
+        font-family: "Poppins Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 11px;
+      }
+
+      svg {
+        @include wh (55px,54px);
+      }
+
+      ul {
+        width: 250px;
+
+
+        li {
+          display: block;
+          cursor: pointer;
+
+          h2 {
+            font-family: "Poppins SemiBold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            color: #00A031;
+          }
+
+          p {
+            font-family: "Poppins Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            color: #6C6C6C;
+            padding-left: 25px;
+          }
+        }
+      }
+
+      .btn:hover, .btn:active {
+        background: #FFFFFF;
+        box-shadow: 5px 5px 6px #6C6C6C;
+      }
+
+      .active {
+        box-shadow: 5px 5px 6px #6C6C6C;
+      }
+    }
+    .right {
+      @include wh (702px,756px);
+    }
+
+  }
+}
+
+@keyframes slyder {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+
